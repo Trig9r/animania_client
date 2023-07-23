@@ -1,0 +1,20 @@
+.button {
+  border: 1px solid #585858;
+  border-radius: 15px;
+  background: #cecfd0;
+
+  cursor: pointer;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.button:active {
+  background: #edeff1;
+  transform: scale(0.98);
+}
+
+.button:hover {
+  transition: background-color 0.5s;
+  background: #edeff1;
+}
