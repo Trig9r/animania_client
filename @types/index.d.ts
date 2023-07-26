@@ -1,5 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { FieldErrors, UseFormRegister } from 'react-hook-form';
+import { CustomArrowProps } from 'react-slick';
 
 type ReactTagProps<T> = import('react').ComponentProps<T>;
 
@@ -67,3 +68,5 @@ export interface WrappedComponentProps {
   isOpen: boolean;
   setIsOpen: (arg0: boolean) => void;
 }
+
+export interface SliderArrowProps extends CustomArrowProps {}

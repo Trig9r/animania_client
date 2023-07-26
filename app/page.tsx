@@ -17,32 +17,34 @@ const Home = () => (
   <>
     <Header />
     <main className='container'>
-      <div className={styles.slogan__container}>
-        <h2 className={styles.slogan__text}>Оживи свой мир с Аниме</h2>
-        <div className={styles.tagline__text}>
-          <p>Насыщенный мир аниме: от захватывающих приключений до трогательных эмоций</p>
-          <p>Все здесь, для вас</p>
+      <div className={styles.offer__container}>
+        <div className={styles.slogan__container}>
+          <h2 className={styles.slogan__text}>Оживи свой мир с Аниме</h2>
+          <div className={styles.tagline__text}>
+            <p>Насыщенный мир аниме: от захватывающих приключений до трогательных эмоций</p>
+            <p>Все здесь, для вас</p>
+          </div>
         </div>
-      </div>
 
-      <div className={styles.play_btn__container}>
-        <Button classnames={styles.play_btn}>
-          <PlayIcon />
-        </Button>
-        <div className={styles.new_title__container}>
-          <span className={styles.new_title__date}>23.06.2023</span>
-          <h3 className={styles.new_title__text}>
-            <p>Новый сезон</p>
-            <p>Бездомный Бог</p>
-          </h3>
+        <div className={styles.play_btn__container}>
+          <Button classnames={styles.play_btn}>
+            <PlayIcon />
+          </Button>
+          <div className={styles.new_title__container}>
+            <span className={styles.new_title__date}>23.06.2023</span>
+            <h3 className={styles.new_title__text}>
+              <p>Новый сезон</p>
+              <p>Бездомный Бог</p>
+            </h3>
+          </div>
         </div>
-      </div>
 
-      <div className={styles.anime_counter__container}>
-        <span className={styles.anime_counter} />
-        <span className={styles.anime_counter} />
-        <span className={`${styles.anime_counter} ${styles.anime_counter_active}`} />
-        <span className={styles.anime_counter} />
+        <div className={styles.anime_counter__container}>
+          <span className={styles.anime_counter} />
+          <span className={styles.anime_counter} />
+          <span className={`${styles.anime_counter} ${styles.anime_counter_active}`} />
+          <span className={styles.anime_counter} />
+        </div>
       </div>
 
       <div className={styles.new_title__container}>

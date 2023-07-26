@@ -10,6 +10,7 @@ export * from './NotificationIcon';
 export * from './PhoneIcon';
 export * from './PlayIcon';
 export * from './SearchIcon';
+export * from './SliderArrowIcon';
 export * from './StarIcon';
 export * from './UserIcon';
 export * from './VKIcon';

@@ -3,6 +3,7 @@
 'use client';
 
 import { AnimatePresence, motion } from 'framer-motion';
+import { useRouter } from 'next/navigation';
 import React, { forwardRef } from 'react';
 
 import { WrappedComponentProps } from '@/@types';
@@ -15,6 +16,8 @@ import styles from './styles.module.css';
 
 const ProfileDropdown = forwardRef<HTMLDivElement, WrappedComponentProps>(
   ({ isOpen, setIsOpen }, ref) => {
+    const router = useRouter();
+
     const toggleProfileDropdown = () => {
       setIsOpen(!isOpen);
     };
@@ -40,7 +43,10 @@ const ProfileDropdown = forwardRef<HTMLDivElement, WrappedComponentProps>(
                 <span className={styles.profile__dropdown__email}>smirnovkiryusha12@gmail.com</span>
               </li>
               <li className={styles.profile__dropdown__item}>
-                <button className={styles.profile__dropdown__item__btn}>
+                <button
+                  className={styles.profile__dropdown__item__btn}
+                  onClick={() => router.push('/auth')}
+                >
                   <span className={styles.profile__dropdown__item__text}>Выйти</span>
                   <span className={styles.profile__dropdown__item__svg}>
                     <LogoutIcon />

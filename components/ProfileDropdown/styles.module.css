@@ -48,7 +48,7 @@
 }
 
 .profile:hover .profile__span > svg {
-  fill: #ffc540;
+  fill: #c2b2be;
   transition: fill 0.2s ease-in-out;
 }
 
@@ -120,7 +120,7 @@
 }
 
 .profile__dropdown__item:hover .profile__dropdown__item__svg > svg {
-  fill: #ffc540;
+  fill: #c2b2be;
   transition: fill 0.2s ease-in-out;
 }
 
@@ -135,7 +135,7 @@
 }
 
 .profile__dropdown__item:hover .profile__dropdown__item__text {
-  color: #ffc540;
+  color: #c2b2be;
   transition: color 0.2s ease-in-out;
 }
 

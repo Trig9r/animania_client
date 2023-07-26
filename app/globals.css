@@ -212,3 +212,8 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+.slick-track {
+  display: flex;
+  gap: 20px;
+}

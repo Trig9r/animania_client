@@ -7,6 +7,8 @@ import useSWR from 'swr';
 import { MerchPropsTypes } from '@/@types';
 import { getMerch } from '@/utils/api';
 
+import { ItemSlider } from '../ItemSlider';
+
 import { CardItem } from './CardItem';
 import { CardSkeleton } from './Skeleton';
 
@@ -15,12 +17,16 @@ export const MerchCards = () => {
 
   if (isLoading) return new Array(3).fill('').map(() => <CardSkeleton />);
 
-  return data.rows.map((merch: MerchPropsTypes) => (
-    <CardItem
-      title={merch.name}
-      price={merch.price}
-      img={JSON.parse(merch.images)[0]}
-      href={`/merch/${merch.name}`}
-    />
-  ));
+  return (
+    <ItemSlider>
+      {data.rows.map((merch: MerchPropsTypes) => (
+        <CardItem
+          title={merch.name}
+          price={merch.price}
+          img={JSON.parse(merch.images)[0]}
+          href={`/merch/${merch.name}`}
+        />
+      ))}
+    </ItemSlider>
+  );
 };
