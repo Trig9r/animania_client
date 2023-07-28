@@ -8,7 +8,7 @@ import { SignInForm, SignUpForm } from '@/components/Forms';
 
 import styles from './page.module.css';
 
-export default function Auth() {
+const Auth = () => {
   const switchCtn = React.useRef() as MutableRefObject<HTMLDivElement>;
   const switchC1 = React.useRef() as MutableRefObject<HTMLDivElement>;
   const switchC2 = React.useRef() as MutableRefObject<HTMLDivElement>;
@@ -81,4 +81,6 @@ export default function Auth() {
       </div>
     </div>
   );
-}
+};
+
+export default Auth;

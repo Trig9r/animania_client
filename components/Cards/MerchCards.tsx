@@ -4,7 +4,7 @@
 
 import useSWR from 'swr';
 
-import { MerchPropsTypes } from '@/@types';
+import { MerchItemsProps } from '@/@types';
 import { getMerch } from '@/utils/api';
 
 import { ItemSlider } from '../ItemSlider';
@@ -13,13 +13,16 @@ import { CardItem } from './CardItem';
 import { CardSkeleton } from './Skeleton';
 
 export const MerchCards = () => {
-  const { data, isLoading, error } = useSWR('/api/merch?limit=20&offset=0', getMerch);
+  const { data, isLoading, error } = useSWR<MerchItemsProps>(
+    '/api/merch?limit=20&offset=0',
+    getMerch
+  );
 
   if (isLoading) return new Array(3).fill('').map(() => <CardSkeleton />);
 
   return (
     <ItemSlider>
-      {data.rows.map((merch: MerchPropsTypes) => (
+      {data?.rows.map((merch) => (
         <CardItem
           title={merch.name}
           price={merch.price}

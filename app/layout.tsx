@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import type { Metadata } from 'next';
 import Head from 'next/head';
 

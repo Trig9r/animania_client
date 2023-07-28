@@ -1,9 +1,10 @@
 import { useRouter } from 'next/navigation';
 
+import { formatPrice } from '@/utils/helpers';
+
 import { LoveIcon, StarIcon } from '../Icons';
 
 import styles from './styles.module.css';
-import { formatPrice } from '@/utils/hooks';
 
 interface CardItemProps {
   img: string;

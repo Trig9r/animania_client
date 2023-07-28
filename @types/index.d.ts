@@ -1,5 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { FieldErrors, UseFormRegister } from 'react-hook-form';
+import { MultiValue, SingleValue } from 'react-select';
 import { CustomArrowProps } from 'react-slick';
 
 type ReactTagProps<T> = import('react').ComponentProps<T>;
@@ -48,6 +49,11 @@ export type AnimePropsTypes = {
   updatedAt: string;
 };
 
+export interface AnimeTitlesProps {
+  count: number;
+  rows: AnimePropsTypes[];
+}
+
 export type MerchPropsTypes = {
   id: number;
   name: string;
@@ -64,9 +70,25 @@ export type MerchPropsTypes = {
   updatedAt: string;
 };
 
+export interface MerchItemsProps {
+  count: number;
+  rows: MerchPropsTypes[];
+}
+
 export interface WrappedComponentProps {
   isOpen: boolean;
   setIsOpen: (arg0: boolean) => void;
 }
 
 export interface SliderArrowProps extends CustomArrowProps {}
+
+export interface IOption {
+  value: string | number;
+  label: string | number;
+}
+
+export type SelectOptionType = MultiValue<IOption> | SingleValue<IOption> | null;
+
+export interface FiltersBlockProps {
+  title: string;
+}

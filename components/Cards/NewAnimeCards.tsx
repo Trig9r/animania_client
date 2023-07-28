@@ -4,8 +4,8 @@
 
 import useSWR from 'swr';
 
-import { AnimePropsTypes } from '@/@types';
-import { getNewAnimeTitle } from '@/utils/api';
+import { AnimeTitlesProps } from '@/@types';
+import { getNewAnimeTitleFx } from '@/utils/api';
 
 import { ItemSlider } from '../ItemSlider';
 
@@ -13,13 +13,16 @@ import { CardItem } from './CardItem';
 import { CardSkeleton } from './Skeleton';
 
 export const NewAnimeCards = () => {
-  const { data, isLoading, error } = useSWR('/api/new-anime-title', getNewAnimeTitle);
+  const { data, isLoading, error } = useSWR<AnimeTitlesProps>(
+    '/api/new-anime-title',
+    getNewAnimeTitleFx
+  );
 
   if (isLoading) return new Array(3).fill('').map(() => <CardSkeleton />);
 
   return (
     <ItemSlider>
-      {data.rows.map((anime: AnimePropsTypes) => (
+      {data?.rows.map((anime) => (
         <CardItem
           key={anime.id}
           title={anime.name}
